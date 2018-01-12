@@ -1,22 +1,53 @@
-# crubox
+# Crubox
 
-TODO: Write a description here
+Crystal Utility Toolbox.
+
+A bunch of help scripts and snippets that are too small for their own
+project, but need somewhere to live.
+
+May include:
+  * algorithms
+  * scripts
+  * useful classes/modules
 
 ## Installation
 
-TODO: Write installation instructions here
+```
+$ # clone the repo
+$ git clone https://github.com/jinyeow/crubox
+$
+$ # create bin/ directory if it doesn't exist
+$ mkdir bin
+$
+$ # run tests
+$ crystal spec
+$
+$ # if tests pass
+$ make
+$
+```
+
+All the tools should be available in the `bin` directory.
+
+Just copy them into your $PATH to use them.
 
 ## Usage
 
-TODO: Write usage instructions here
+For the up_or_down tool:
+```
+$ up_or_down "www.webnovel.com"
+www.webnovel.com is up
+```
 
 ## Development
 
-TODO: Write development instructions here
+1. Fork the repo
+2. Make changes
+3. Create a new PR
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/crubox/fork )
+1. Fork it ( https://github.com/jinyeow/crubox/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -24,4 +55,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) jinyeow - creator, maintainer
+- [jinyeow](https://github.com/jinyeow) - creator, maintainer
