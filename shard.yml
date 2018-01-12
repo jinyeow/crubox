@@ -1,0 +1,13 @@
+name: crubox
+version: 0.1.0
+
+authors:
+  - jinyeow <jin-yeow@outlook.com>
+
+targets:
+  crubox:
+    main: src/crubox.cr
+
+crystal: 0.24.1
+
+license: MIT
