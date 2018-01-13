@@ -27,9 +27,12 @@ $ make all
 $
 ```
 
-All the tools should be available in the `bin` directory.
+`make all` will compile all the tools and place the executables in the `bin` directory.
+It will then copy all of them into `$HOME/.bin`.
 
-Just copy them into your $PATH to use them.
+If `$HOME/.bin` is not in the `$PATH` you can change where the executables are copied to by modifying the `PATHDIR` variable in the Makefile.
+
+If you want to build/copy individual tools, all the tools should be available in the `bin` directory. Just copy them into your `$PATH` to use them.
 
 ## Usage
 
