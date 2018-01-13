@@ -39,11 +39,15 @@ $ up_or_down "www.webnovel.com"
 www.webnovel.com is up
 ```
 
-## Development
+For the netgeo tool:
+```
+$ # Some examples
+$ netgeo --wan
+$ netgeo --router
+$ netgeo --geo
+```
 
-1. Fork the repo
-2. Make changes
-3. Create a new PR
+See `netgeo --help` for more options.
 
 ## Contributing
 
