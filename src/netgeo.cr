@@ -2,7 +2,19 @@ require "http/client"
 require "json"
 require "option_parser"
 
+require "./crubox/lan"
+
 VERSION = "0.4.0"
+
+def get_string(ptr : Pointer(UInt8)) : String
+  i = 0
+  str = ""
+  while (c = (ptr + i).value) != 0
+    str += c.chr
+    i += 1
+  end
+  return str
+end
 
 OptionParser.parse! do |parser|
   parser.banner = "Usage: #{PROGRAM_NAME} [OPTIONS]"
@@ -19,9 +31,15 @@ OptionParser.parse! do |parser|
   end
 
   parser.on("-l", "--lan", "Returns LAN IP(s)") do
-    # TODO
-    # lans = 
-    # puts lans.join(", ")
+    ifi = LAN.get_interface.value
+    nmask_ptr = LAN.ipaddrs_name(ifi.ifa_netmask)
+    nmask_str = get_string(nmask_ptr)
+    netmask = LAN.netmask_to_i(nmask_str)
+
+    ip_addr_ptr = LAN.ipaddrs_name(ifi.ifa_addr)
+    ip_addr_str = get_string(ip_addr_ptr)
+
+    puts "#{ip_addr_str}/#{netmask}"
   end
 
   parser.on("-r", "--router", "Returns Router IP") do
