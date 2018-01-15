@@ -23,7 +23,7 @@ $ # run tests
 $ crystal spec
 $
 $ # if tests pass
-$ make all
+$ make fresh
 $
 ```
 

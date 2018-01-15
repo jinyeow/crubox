@@ -30,9 +30,9 @@ copy: ## Copies executables from bin/ to $HOME/.bin
 clearscreen:
 	clear
 
-refresh: clean clearscreen all
+fresh: clean clearscreen all
 
-.PHONY: all clean copy clearscreen refresh
+.PHONY: all clean copy clearscreen fresh
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
